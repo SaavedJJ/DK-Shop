@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diseños DK | DK Design Kings</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="Coleccion.css">
+    <script src="script.js" defer></script>
+    <script src="carrito.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="./Dk1.png"
+                     style="width:125px; height:80px; object-fit:contain; display:block;"
+                     alt="DK Design Kings">
+            </div>
+
+            <div class="brand-name">
+                Design Kings
+            </div>
+
+            <ul class="menu">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#productos">Productos</a></li>
+                <li><a href="index.html#disena">Diseña</a></li>
+                <li><a href="index.html#vip">VIP</a></li>
+                <li><a href="index.html#ubicacion">Ubicación</a></li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+            </ul>
+
+            <button type="button" class="cart-button nav-cart" data-carrito>
+                Carrito <span class="cart-count oculto">0</span>
+            </button>
+
+        </nav>
+    </header>
+
+    <main class="collection-page">
+
+        <section class="collection-hero">
+            <span class="collection-label">DK COLLECTION</span>
+            <h1>DISEÑOS<br><span>DK.</span></h1>
+            <p>
+                Prendas diseñadas por nuestro equipo. Elige una
+                y personalízala a tu manera, o úsala de inspiración.
+            </p>
+        </section>
+
+        <section class="collection-grid">
+
+            <!-- Imágenes: imagen1.png ... imagen5.png (misma carpeta que este archivo) -->
+
+            <!-- PRENDA 1 -->
+            <article class="collection-card" data-prenda="manga_corta" data-precio="19.99">
+                <div class="collection-image">
+                    <img src="Venta_1_MCorta.png" alt="Diseño DK 1">
+                </div>
+                <div class="collection-info">
+                    <span class="collection-type">TIPO DE PRENDA</span>
+                    <h2>Camiseta Japonesa DK</h2>
+                    <p>Breve descripción del diseño.</p>
+                    <p class="collection-price">19,99 €</p>
+                    <div class="collection-buy">
+                        <select class="collection-size" aria-label="Talla">
+                            <option>S</option><option selected>M</option><option>L</option>
+                            <option>XL</option><option>XXL</option>
+                        </select>
+                        <button type="button" class="collection-add">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PRENDA 2 -->
+            <article class="collection-card" data-prenda="manga_corta" data-precio="19.99">
+                <div class="collection-image">
+                    <img src="Venta_2_MLarga.png" alt="Diseño DK 2">
+                </div>
+                <div class="collection-info">
+                    <span class="collection-type">TIPO DE PRENDA</span>
+                    <h2>Manga Larga Pegada</h2>
+                    <p>Breve descripción del diseño.</p>
+                    <p class="collection-price">19,99 €</p>
+                    <div class="collection-buy">
+                        <select class="collection-size" aria-label="Talla">
+                            <option>S</option><option selected>M</option><option>L</option>
+                            <option>XL</option><option>XXL</option>
+                        </select>
+                        <button type="button" class="collection-add">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PRENDA 3 -->
+            <article class="collection-card" data-prenda="manga_corta" data-precio="19.99">
+                <div class="collection-image">
+                    <img src="Venta_3_Sudadera.png" alt="Diseño DK 3">
+                </div>
+                <div class="collection-info">
+                    <span class="collection-type">TIPO DE PRENDA</span>
+                    <h2>Sudadera Urbana</h2>
+                    <p>Breve descripción del diseño.</p>
+                    <p class="collection-price">19,99 €</p>
+                    <div class="collection-buy">
+                        <select class="collection-size" aria-label="Talla">
+                            <option>S</option><option selected>M</option><option>L</option>
+                            <option>XL</option><option>XXL</option>
+                        </select>
+                        <button type="button" class="collection-add">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PRENDA 4 -->
+            <article class="collection-card" data-prenda="manga_corta" data-precio="19.99">
+                <div class="collection-image">
+                    <img src="Venta_4_Pantalones.png" alt="Diseño DK 4">
+                </div>
+                <div class="collection-info">
+                    <span class="collection-type">TIPO DE PRENDA</span>
+                    <h2>Vaqueros Urbanos</h2>
+                    <p>Breve descripción del diseño.</p>
+                    <p class="collection-price">19,99 €</p>
+                    <div class="collection-buy">
+                        <select class="collection-size" aria-label="Talla">
+                            <option>S</option><option selected>M</option><option>L</option>
+                            <option>XL</option><option>XXL</option>
+                        </select>
+                        <button type="button" class="collection-add">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PRENDA 5 -->
+            <article class="collection-card" data-prenda="manga_corta" data-precio="19.99">
+                <div class="collection-image">
+                    <img src="Venta_5_PantRotos.png" alt="Diseño DK 5">
+                </div>
+                <div class="collection-info">
+                    <span class="collection-type">TIPO DE PRENDA</span>
+                    <h2>Vaqueros Japoneses</h2>
+                    <p>Breve descripción del diseño.</p>
+                    <p class="collection-price">19,99 €</p>
+                    <div class="collection-buy">
+                        <select class="collection-size" aria-label="Talla">
+                            <option>S</option><option selected>M</option><option>L</option>
+                            <option>XL</option><option>XXL</option>
+                        </select>
+                        <button type="button" class="collection-add">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <div class="collection-back">
+            <a href="index.html#productos" class="button-outline">← VOLVER</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <h3>DK DESIGN KINGS</h3>
+        <p>DISEÑA. CREA. REPRESENTA.</p>
+        © <span class="footer-year"></span> DK Design Kings
+    </footer>
+
+
+    <script>
+        /* Añadir los diseños DK al carrito (usa carrito.js) */
+        document.querySelectorAll('.collection-card').forEach(function (card) {
+            var boton = card.querySelector('.collection-add');
+            boton.addEventListener('click', function () {
+                var img = card.querySelector('.collection-image img');
+                var nombre = card.querySelector('h2').textContent.trim();
+                var precio = parseFloat(card.dataset.precio);
+                var ok = Carrito.añadir({
+                    prenda: card.dataset.prenda,
+                    nombre: nombre,
+                    talla: card.querySelector('.collection-size').value,
+                    detalles: ['Diseño DK Design Kings'],
+                    precio: precio,
+                    foto: img ? img.getAttribute('src') : '',
+                    diseno: { origen: 'tienda' }
+                });
+                if (ok) {
+                    boton.textContent = 'AÑADIDO ✓';
+                    setTimeout(function () { boton.textContent = 'AÑADIR AL CARRITO'; }, 1500);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

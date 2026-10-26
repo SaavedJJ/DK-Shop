@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- El título se cambia solo según la prenda (editor.js) -->
+    <title>DK Design Kings - Personaliza tu prenda</title>
+
+    <!-- Tipos de letra para el texto de la prenda -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@700&family=Oswald:wght@600&family=Pacifico&family=Permanent+Marker&family=Playfair+Display:wght@800&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="camisetas.css">
+    <link rel="stylesheet" href="carrito.css">
+
+    <script
+        type="module"
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+
+    <header class="editor-header">
+
+        <div class="logo">DK</div>
+
+        <div class="header-title">
+            <h1>DK DESIGN KINGS</h1>
+            <p id="tituloCabecera">PERSONALIZA TU PRENDA</p>
+        </div>
+
+        <div class="header-actions">
+            <button type="button" class="cart-button" data-carrito>
+                Carrito <span class="cart-count oculto">0</span>
+            </button>
+            <a href="index.html" class="back-button">← Volver</a>
+        </div>
+
+    </header>
+
+
+    <main class="editor-container">
+
+        <section class="editor-intro">
+            <h2 id="tituloIntro">Diseña tu prenda</h2>
+            <p>
+                Elige el modelo, color y diseño que más te guste.
+                Crea una prenda única y personalizada.
+            </p>
+        </section>
+
+
+        <!-- MODELOS (se rellenan desde prendas.js) -->
+
+        <section class="models-section">
+            <h2>Elige tu modelo</h2>
+            <div class="models" id="listaModelos"></div>
+        </section>
+
+
+        <!-- PRENDA SIN MODELO 3D TODAVÍA -->
+
+        <section class="coming-soon oculto" id="avisoProximamente">
+            <h2>Muy pronto</h2>
+            <p>
+                Estamos preparando el editor 3D de esta prenda.
+                Mientras tanto, puedes diseñar tu camiseta.
+            </p>
+            <a href="editor.html?prenda=manga_corta" class="back-button">Diseñar una camiseta</a>
+        </section>
+
+
+        <!-- EDITOR -->
+
+        <section class="editor">
+
+            <!-- VISTA DE LA PRENDA -->
+
+            <div class="preview-area">
+
+                <div class="preview-top">
+
+                    <h2>Vista previa</h2>
+
+                    <div class="view-buttons">
+                        <button class="view-button active" data-view="front">Frontal</button>
+                        <button class="view-button" data-view="back">Trasera</button>
+                    </div>
+
+                </div>
+
+                <div class="shirt-preview">
+
+                    <!-- el modelo (src) y la cámara se ponen desde editor.js -->
+                    <model-viewer
+                        id="camiseta3D"
+                        alt="Prenda 3D DK Design Kings"
+                        camera-controls
+                        auto-rotate
+                        shadow-intensity="1"
+                        exposure="1"
+                        environment-image="neutral"
+                        style="width: 100%; height: 450px; background: transparent;">
+                    </model-viewer>
+
+                </div>
+
+                <!-- CAPAS -->
+
+                <div class="layers-panel">
+
+                    <div class="layers-top">
+                        <div>
+                            <h3>Capas</h3>
+                            <p class="layers-side" id="layersSide">Lado: Frontal</p>
+                        </div>
+                        <div class="layers-add">
+                            <button type="button" id="btnDeshacer" class="history-btn" title="Deshacer (Ctrl+Z)">↶</button>
+                            <button type="button" id="btnRehacer" class="history-btn" title="Rehacer (Ctrl+Y)">↷</button>
+                            <button type="button" id="btnAddTexto">+ Texto</button>
+                            <button type="button" id="btnAddImagen">+ Imagen</button>
+                        </div>
+                    </div>
+
+                    <ul class="layers-list" id="layersList"></ul>
+
+                    <p class="layers-empty oculto" id="layersEmpty">
+                        No hay capas en este lado. Añade un texto o una imagen.
+                    </p>
+
+                    <p class="text-help">
+                        La capa de arriba de la lista es la que se ve por encima.
+                        Usa ▲ ▼ para cambiar el orden, el ojo para ocultarla y ✎ para renombrarla.
+                        Ctrl+Z deshace y Ctrl+Y rehace.
+                    </p>
+
+                </div>
+
+                <!-- MIS DISEÑOS -->
+
+                <div class="layers-panel designs-panel">
+
+                    <div class="layers-top">
+                        <h3>Mis diseños</h3>
+                    </div>
+
+                    <div class="draft-notice oculto" id="avisoBorrador">
+                        <span>Hemos recuperado tu último diseño sin guardar.</span>
+                        <button type="button" id="btnEmpezarDeCero">Empezar de cero</button>
+                    </div>
+
+                    <div class="design-save">
+                        <input type="text" id="nombreDiseno" placeholder="Nombre del diseño" maxlength="40">
+                        <button type="button" id="btnGuardarDiseno">Guardar</button>
+                    </div>
+
+                    <ul class="layers-list" id="listaGuardados"></ul>
+
+                    <p class="layers-empty" id="guardadosVacio">
+                        Aún no has guardado ningún diseño.
+                    </p>
+
+                    <p class="text-help">
+                        Pulsa un diseño para abrirlo. Se guardan en este navegador,
+                        y lo que estás haciendo se guarda solo mientras trabajas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PANEL DE PERSONALIZACIÓN -->
+
+            <aside class="custom-panel">
+
+                <h2>Personalización</h2>
+
+                <!-- COLOR DE LA PRENDA -->
+
+                <div class="option">
+                    <div class="custom-color-picker">
+                        <label for="colorPersonalizado" id="etiquetaColor">Color de la prenda</label>
+                        <input type="color" id="colorPersonalizado" value="#171717">
+                        <span id="codigoColor">#171717</span>
+
+                        <div id="coloresExtra" class="colores-extra"></div>
+
+                        <label for="colorModo">Tipo de color</label>
+                        <select id="colorModo">
+                            <option value="liso">Un solo color</option>
+                            <option value="vertical">Degradado vertical</option>
+                            <option value="horizontal">Degradado horizontal</option>
+                            <option value="diagonal">Degradado diagonal</option>
+                            <option value="radial">Degradado radial</option>
+                            <option value="franjas">Franjas</option>
+                        </select>
+
+                        <div class="color-actions oculto" id="coloresAcciones">
+                            <button type="button" id="btnAddColor">+ Añadir color</button>
+                        </div>
+
+                        <p class="text-help oculto" id="coloresAyuda">
+                            Puedes usar hasta 5 colores. Las piezas que no se
+                            estampan (mangas, cuello...) usan el primer color.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-help oculto" id="sinSeleccion">
+                    Selecciona una capa de la lista (debajo de la vista previa)
+                    para editar su texto o su imagen.
+                </p>
+
+                <!-- DISEÑO -->
+
+                <div class="option" id="seccionDiseno">
+                    <h3>Diseño</h3>
+                    <select id="design">
+                        <option value="dk">DK</option>
+                        <option value="kings">KINGS</option>
+                        <option value="custom">Personalizado</option>
+                    </select>
+                </div>
+
+                <!-- TEXTO PERSONALIZADO -->
+
+                <div class="option" id="seccionTexto">
+
+                    <h3>Texto personalizado</h3>
+
+                    <input
+                        type="text"
+                        id="customText"
+                        placeholder="Escribe tu texto..."
+                        maxlength="20"
+                        value="DK"
+                    >
+
+                    <label for="fontSelect">Tipo de letra</label>
+                    <select id="fontSelect">
+                        <option value="Arial, sans-serif">Arial</option>
+                        <option value="'Bebas Neue', sans-serif">Bebas Neue</option>
+                        <option value="'Oswald', sans-serif">Oswald</option>
+                        <option value="'Cinzel', serif">Cinzel (elegante)</option>
+                        <option value="'Playfair Display', serif">Playfair Display</option>
+                        <option value="'UnifrakturCook', cursive">Gótica</option>
+                        <option value="'Permanent Marker', cursive">Rotulador</option>
+                        <option value="'Pacifico', cursive">Pacifico (cursiva)</option>
+                    </select>
+
+                    <label for="textColor">Color del texto</label>
+                    <input type="color" id="textColor" value="#c9a227">
+
+                    <label for="textSize">Tamaño del texto</label>
+                    <input type="range" id="textSize" min="12" max="90" value="28">
+                    <p id="textSizeValue">28 px</p>
+
+                    <label for="textRotation">Rotación</label>
+                    <input type="range" id="textRotation" min="-180" max="180" value="0">
+                    <p id="textRotationValue" class="range-value">0°</p>
+
+                    <div class="control-grupo">
+                        <label for="textOpacity">Opacidad del texto</label>
+                        <input type="range" id="textOpacity" min="0" max="100" value="100">
+                        <span id="textOpacityValue">100 %</span>
+                    </div>
+
+                    <div class="text-tools">
+                        <button type="button" id="btnMover">✥ Mover texto</button>
+                        <button type="button" id="btnCentrar">Centrar</button>
+                    </div>
+
+                    <p class="text-help">
+                        Pulsa «Mover texto» y arrastra (o toca) sobre la prenda
+                        para colocarlo donde quieras. Desactívalo para girar la prenda.
+                    </p>
+
+                </div>
+
+                <!-- IMAGEN -->
+
+                <div class="option" id="seccionImagen">
+
+                    <h3>Imagen</h3>
+
+                    <select id="imageSelect">
+                        <option value="">Sin imagen</option>
+                    </select>
+
+                    <label for="imageUpload">O sube tu propia imagen</label>
+                    <input type="file" id="imageUpload" accept="image/*">
+
+                    <label for="imageSize">Tamaño de la imagen</label>
+                    <input type="range" id="imageSize" min="5" max="100" value="30">
+                    <p id="imageSizeValue" class="range-value">30 %</p>
+
+                    <label for="imageRotation">Rotación</label>
+                    <input type="range" id="imageRotation" min="-180" max="180" value="0">
+                    <p id="imageRotationValue" class="range-value">0°</p>
+
+                    <label class="check-line">
+                        <input type="checkbox" id="imageUseColor">
+                        Cambiar el color de la imagen
+                    </label>
+                    <input type="color" id="imageColor" value="#c9a227">
+
+                    <div class="text-tools">
+                        <button type="button" id="btnMoverImagen">✥ Mover imagen</button>
+                        <button type="button" id="btnCentrarImagen">Centrar</button>
+                        <button type="button" id="btnQuitarImagen">Eliminar capa</button>
+                    </div>
+
+                    <div class="control-grupo">
+                        <label for="imageOpacity">Opacidad de la imagen</label>
+                        <input type="range" id="imageOpacity" min="0" max="100" value="100">
+                        <span id="imageOpacityValue">100 %</span>
+                    </div>
+
+                </div>
+
+                <!-- DISEÑOS PREDETERMINADOS DK -->
+
+                <div class="dk-disenos">
+                    <button type="button" id="btnMostrarDisenos">
+                        Diseños predeterminados ▼
+                    </button>
+
+                    <div id="listaDisenos" class="dk-lista-disenos" hidden>
+                        <button type="button" class="dk-diseno" data-imagen="Imagen1.png">
+                            <img src="Imagen1.png" alt="Diseño 1">
+                        </button>
+                        <button type="button" class="dk-diseno" data-imagen="Imagen2.png">
+                            <img src="Imagen2.png" alt="Diseño 2">
+                        </button>
+                        <button type="button" class="dk-diseno" data-imagen="Imagen3.png">
+                            <img src="Imagen3.png" alt="Diseño 3">
+                        </button>
+                        <button type="button" class="dk-diseno" data-imagen="Imagen4.png">
+                            <img src="Imagen4.png" alt="Diseño 4">
+                        </button>
+                        <button type="button" class="dk-diseno" data-imagen="Imagen5.png">
+                            <img src="Imagen5.png" alt="Diseño 5">
+                        </button>
+                        <button type="button" class="dk-diseno" data-imagen="Imagen6.png">
+                            <img src="Imagen6.png" alt="Diseño 6">
+                        </button>
+                        <button type="button" class="dk-diseno" data-imagen="DkSinFondo.png">
+                            <img src="DkSinFondo.png" alt="Diseño 7">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TALLA -->
+
+                <div class="option">
+                    <h3>Talla</h3>
+                    <div class="sizes">
+                        <button>S</button>
+                        <button class="active">M</button>
+                        <button>L</button>
+                        <button>XL</button>
+                        <button>XXL</button>
+                    </div>
+                </div>
+
+                <!-- PRECIO -->
+
+                <div class="price-box">
+                    <span>Precio</span>
+                    <strong>24,99 €</strong>
+                </div>
+
+                <button class="add-cart">Añadir al carrito</button>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <section class="info-section">
+        <h2>Tu diseño, tus reglas</h2>
+        <p>
+            En DK Design Kings puedes crear prendas adaptadas a tu estilo.
+            Elige el modelo, personaliza el diseño y crea una prenda única.
+        </p>
+    </section>
+
+
+    <footer>
+        <h3>DK DESIGN KINGS</h3>
+        <p>Diseña. Personaliza. Destaca.</p>
+        <p>© 2026 DK Design Kings</p>
+    </footer>
+
+    <!-- el orden importa: catálogo, carrito, editor y, al final, mis diseños -->
+    <script src="prendas.js"></script>
+    <script src="carrito.js"></script>
+    <script src="proyeccion.js"></script>
+    <script src="editor.js"></script>
+    <script src="disenos_guardados.js"></script>
+
+</body>
+</html>

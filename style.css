@@ -1,0 +1,2873 @@
+/* ==========================================
+   DK DESIGN KINGS
+   MODERN BLACK & GOLD
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --black: #050505;
+    --black-light: #0c0c0c;
+    --card: #111111;
+    --card-light: #171717;
+
+    --gold: #d4af37;
+    --gold-light: #f0d66d;
+
+    --white: #ffffff;
+    --gray: #b5b5b5;
+    --dark-gray: #777777;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   NAVEGACIÓN
+   ========================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(5, 5, 5, 0.88);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.navbar {
+    max-width: 1250px;
+
+    min-height: 80px;
+
+    margin: auto;
+
+    padding: 10px 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    transition: 0.5s;
+}
+
+.logo img {
+    width: 6px;
+    height: 60px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+
+.brand-name {
+    color: var(--white);
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+/* MENÚ */
+
+.menu {
+    list-style: none;
+
+    display: flex;
+
+    gap: 50px;
+
+    margin-left: auto;
+}
+
+.menu a {
+    position: relative;
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--gold);
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--gold);
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+
+/* ==========================================
+   HERO / PORTADA
+   ========================================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 140px 8% 80px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(212, 175, 55, 0.12),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #050505 0%,
+            #0a0a0a 50%,
+            #050505 100%
+        );
+}
+
+
+/* BRILLO DECORATIVO */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    top: 100px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(212, 175, 55, 0.12);
+
+    box-shadow:
+        0 0 100px rgba(212, 175, 55, 0.05);
+}
+
+
+.hero-content {
+    position: relative;
+
+    max-width: 800px;
+
+    z-index: 2;
+}
+
+
+.small-title {
+    color: var(--gold);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 {
+    font-size: clamp(60px, 10vw, 125px);
+
+    line-height: 0.86;
+
+    letter-spacing: -6px;
+
+    font-weight: 900;
+
+    margin-bottom: 35px;
+}
+
+
+.hero p {
+    max-width: 600px;
+
+    color: var(--gray);
+
+    font-size: 18px;
+
+    margin-bottom: 40px;
+}
+
+
+/* ==========================================
+   BOTONES
+   ========================================== */
+
+.button {
+    display: inline-block;
+
+    padding: 16px 32px;
+
+    background: var(--gold);
+
+    color: #000;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 10px 30px rgba(212, 175, 55, 0.12);
+}
+
+.button:hover {
+    background: var(--gold-light);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(212, 175, 55, 0.25);
+}
+
+
+/* ==========================================
+   SECCIONES
+   ========================================== */
+
+.section {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 120px 30px;
+}
+
+
+.section h2 {
+    font-size: 42px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 20px;
+}
+
+
+.section-text {
+    max-width: 650px;
+
+    color: var(--gray);
+
+    margin-bottom: 60px;
+}
+
+
+/* ==========================================
+   PRODUCTOS
+   ========================================== */
+
+.products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.product-card {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0d0d0d
+        );
+
+    border: 1px solid #242424;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+
+.product-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--gold);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: 0.4s;
+}
+
+
+.product-card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(212, 175, 55, 0.5);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+
+.product-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+.product-image {
+    height: 220px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #222222,
+            #0b0b0b
+        );
+
+    border-radius: 8px;
+
+    font-size: 90px;
+
+    margin-bottom: 25px;
+}
+
+
+.product-card h3 {
+    color: var(--white);
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+
+.product-card p {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   DISEÑA
+   ========================================== */
+
+.design-section {
+    text-align: center;
+
+    max-width: 1300px;
+}
+
+
+.design-section > p {
+    max-width: 700px;
+
+    margin: 0 auto 65px;
+
+    color: var(--gray);
+}
+
+
+.steps {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.steps div {
+    position: relative;
+
+    background: var(--card);
+
+    border: 1px solid #242424;
+
+    padding: 40px 30px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+
+.steps div:hover {
+    border-color: var(--gold);
+
+    transform: translateY(-6px);
+}
+
+
+.steps span {
+    color: var(--gold);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.steps h3 {
+    color: var(--white);
+
+    font-size: 26px;
+
+    margin: 15px 0 10px;
+}
+
+
+.steps p {
+    color: var(--gray);
+}
+
+
+/* ==========================================
+   VIP
+   ========================================== */
+
+.vip-section {
+    max-width: 1300px;
+
+    text-align: center;
+}
+
+
+.vip-section > p {
+    color: var(--gray);
+
+    margin-bottom: 60px;
+}
+
+
+.levels {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+
+.level {
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0d0d0d
+        );
+
+    border: 1px solid #292929;
+
+    padding: 30px 15px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+
+.level:hover {
+    border-color: var(--gold);
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(212, 175, 55, 0.08);
+}
+
+
+.level span {
+    color: var(--gold);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.level h3 {
+    color: var(--white);
+
+    font-size: 45px;
+
+    margin: 12px 0;
+}
+
+
+.level p {
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   SOBRE NOSOTROS
+   ========================================== */
+
+.about {
+    max-width: 900px;
+
+    text-align: center;
+}
+
+
+.about h2 {
+    margin-bottom: 35px;
+}
+
+
+.about p {
+    color: var(--gray);
+
+    margin-bottom: 20px;
+
+    font-size: 17px;
+}
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+footer {
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: #030303;
+
+    border-top: 1px solid #1c1c1c;
+}
+
+
+footer h3 {
+    color: var(--gold);
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+
+footer p {
+    color: var(--dark-gray);
+
+    margin: 5px;
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .levels {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* ==========================================
+   MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 70px;
+
+        padding: 10px 15px;
+    }
+
+    .brand-name {
+        font-size: 15px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hero {
+        padding: 120px 25px 70px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .section h2 {
+        font-size: 32px;
+    }
+
+    .levels {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==========================================
+   PORTADA DK DESIGN KINGS
+   ========================================== */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 140px 8% 80px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(212, 175, 55, 0.13),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            120deg,
+            #030303 0%,
+            #080808 55%,
+            #050505 100%
+        );
+}
+
+
+/* LÍNEAS DECORATIVAS */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    right: -250px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: 1px solid rgba(212, 175, 55, 0.12);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 100px rgba(212, 175, 55, 0.05);
+}
+
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -150px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: 1px solid rgba(212, 175, 55, 0.08);
+
+    border-radius: 50%;
+}
+
+
+/* CONTENIDO */
+
+.hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 750px;
+}
+
+
+/* PEQUEÑO TÍTULO */
+
+.hero-label {
+    display: inline-block;
+
+    color: #d4af37;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 25px;
+
+    padding-left: 2px;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.hero h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(70px, 10vw, 135px);
+
+    line-height: 0.83;
+
+    letter-spacing: -7px;
+
+    font-weight: 900;
+}
+
+
+/* PALABRA DORADA */
+
+.hero h1 span {
+    color: #d4af37;
+
+    text-shadow:
+        0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+
+/* DESCRIPCIÓN */
+
+.hero-description {
+    max-width: 550px;
+
+    margin-top: 35px;
+
+    margin-bottom: 35px;
+
+    color: #b5b5b5;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* BOTONES */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.hero-buttons .button {
+    margin: 0;
+}
+
+
+/* BOTÓN TRANSPARENTE */
+
+.button-outline {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    color: #ffffff;
+
+    background: transparent;
+
+    border: 1px solid #444444;
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.button-outline:hover {
+    color: #d4af37;
+
+    border-color: #d4af37;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   DECORACIÓN DK
+   ========================================== */
+
+.hero-decoration {
+    position: absolute;
+
+    right: 8%;
+
+    top: 50%;
+
+    width: 500px;
+    height: 500px;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+}
+
+
+/* CÍRCULO DORADO */
+
+.gold-circle {
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+
+    border: 2px solid rgba(211, 110, 0, 0.86);
+
+    box-shadow:
+        0 0 90px rgba(229, 232, 0, 0.86);
+
+    animation: floating 5s ease-in-out infinite;
+}
+
+
+ /* DK GIGANTE */
+
+.dk-watermark {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 800px;
+    height: 800px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    user-select: none;
+}
+
+.dk-watermark img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    opacity: 0.85;
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes floating {
+
+    0% {
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg);
+    }
+
+    50% {
+        transform:
+            translate(-50%, -53%)
+            rotate(50deg);
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg);
+    }
+
+}
+
+
+/* ==========================================
+   SCROLL
+   ========================================== */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 35px;
+    left: 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #666666;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+.scroll-line {
+    width: 50px;
+
+    height: 1px;
+
+    background: #d4af37;
+}
+
+
+/* ==========================================
+   PORTADA EN TABLET
+   ========================================== */
+
+@media (max-width: 1000px) {
+
+    .hero-decoration {
+        right: -100px;
+
+        opacity: 0.5;
+    }
+
+}
+
+
+/* ==========================================
+   PORTADA EN MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding:
+            130px 25px
+            100px;
+    }
+
+
+    .hero h1 {
+        font-size: 68px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .hero-decoration {
+        right: -250px;
+
+        opacity: 0.25;
+    }
+
+
+    .scroll-indicator {
+        left: 25px;
+    }
+
+}
+/* ==========================================
+   PRODUCTOS - DK COLLECTION
+   ========================================== */
+
+.products-section {
+    max-width: 1300px;
+}
+
+
+/* CABECERA */
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.section-heading span {
+    color: #d4af37;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+}
+
+.section-heading h2 {
+    margin-top: 12px;
+
+    margin-bottom: 15px;
+
+    font-size: 48px;
+
+    color: #ffffff;
+}
+
+.section-heading p {
+    max-width: 600px;
+
+    color: #999999;
+
+    font-size: 16px;
+}
+
+
+/* GRID */
+
+.products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* TARJETA */
+
+.product-card {
+    position: relative;
+
+    background: #0d0d0d;
+
+    border: 1px solid #242424;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(212, 175, 55, 0.55);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+
+/* IMAGEN */
+
+.product-image {
+    height: 360px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #242424 0%,
+            #111111 45%,
+            #080808 100%
+        );
+}
+
+
+/* BRILLO */
+
+.product-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(212, 175, 55, 0.08);
+
+    filter: blur(40px);
+
+    transition: 0.4s;
+}
+
+.product-card:hover .product-image::before {
+    background:
+        rgba(212, 175, 55, 0.14);
+
+    transform: scale(1.2);
+}
+
+
+/* ETIQUETA */
+
+.product-tag {
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    padding: 7px 12px;
+
+    background: #d4af37;
+
+    color: #000;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    border-radius: 3px;
+}
+
+
+/* ==========================================
+   PRENDAS CREADAS CON CSS
+   ========================================== */
+
+.clothing-icon {
+    position: relative;
+
+    z-index: 2;
+
+    filter:
+        drop-shadow(
+            0 20px 20px rgba(0,0,0,0.5)
+        );
+}
+
+
+/* CAMISETA */
+
+.t-shirt {
+    width: 190px;
+    height: 210px;
+}
+
+.shirt-body {
+    position: absolute;
+
+    width: 120px;
+    height: 155px;
+
+    left: 35px;
+    top: 40px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #222222,
+            #090909
+        );
+
+    border: 1px solid #444;
+
+    border-radius:
+        10px 10px 15px 15px;
+}
+
+.shirt-body::before,
+.shirt-body::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    width: 55px;
+    height: 75px;
+
+    background: #151515;
+
+    border: 1px solid #444;
+}
+
+.shirt-body::before {
+    left: -45px;
+
+    transform:
+        rotate(25deg);
+
+    border-radius: 8px;
+}
+
+.shirt-body::after {
+    right: -45px;
+
+    transform:
+        rotate(-25deg);
+
+    border-radius: 8px;
+}
+
+
+/* SUDADERA */
+
+.hoodie {
+    width: 210px;
+    height: 230px;
+}
+
+.hoodie-body {
+    position: absolute;
+
+    width: 145px;
+    height: 175px;
+
+    left: 32px;
+    top: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #292929,
+            #080808
+        );
+
+    border: 1px solid #444;
+
+    border-radius:
+        12px 12px 20px 20px;
+}
+
+.hoodie-body::before {
+    content: "";
+
+    position: absolute;
+
+    width: 75px;
+    height: 55px;
+
+    left: 35px;
+    top: -30px;
+
+    border: 1px solid #555;
+
+    border-bottom: none;
+
+    border-radius:
+        50px 50px 0 0;
+}
+
+.hoodie-body::after {
+    content: "DK";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    color: #d4af37;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+
+/* PANTALÓN */
+
+.pants {
+    width: 180px;
+    height: 240px;
+}
+
+.pants-body {
+    position: absolute;
+
+    width: 150px;
+    height: 210px;
+
+    left: 15px;
+    top: 15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #111111,
+            #252525,
+            #111111
+        );
+
+    border: 1px solid #444;
+
+    clip-path:
+        polygon(
+            15% 0,
+            85% 0,
+            75% 48%,
+            100% 100%,
+            58% 100%,
+            50% 55%,
+            42% 100%,
+            0 100%,
+            25% 48%
+        );
+}
+
+
+/* ==========================================
+   INFORMACIÓN
+   ========================================== */
+
+.product-info {
+    padding: 28px;
+}
+
+
+.product-type {
+    color: #d4af37;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.product-info h3 {
+    margin-top: 8px;
+
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 27px;
+}
+
+
+.product-info p {
+    min-height: 70px;
+
+    color: #999999;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+/* ==========================================
+   SECCIÓN DISEÑA
+   ========================================== */
+
+.design-section {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    padding: 140px 8%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 100px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #050505 0%,
+            #090909 50%,
+            #050505 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* LÍNEA DECORATIVA */
+
+.design-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -300px;
+    bottom: -300px;
+
+    border: 1px solid
+        rgba(212, 175, 55, 0.12);
+
+    border-radius: 50%;
+}
+
+
+/* ==========================================
+   TEXTO
+   ========================================== */
+
+.design-intro {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 600px;
+}
+
+
+.design-label {
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #d4af37;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+}
+
+
+.design-intro h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(50px, 6vw, 90px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    font-weight: 900;
+}
+
+
+.design-intro h2 span {
+
+    color: #d4af37;
+
+}
+
+
+.design-intro p {
+
+    max-width: 500px;
+
+    margin-top: 35px;
+
+    margin-bottom: 35px;
+
+    color: #999999;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   BOTÓN
+   ========================================== */
+
+.design-button {
+
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    color: #050505;
+
+    background: #d4af37;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    border: 1px solid #d4af37;
+
+    transition: 0.3s;
+}
+
+
+.design-button:hover {
+
+    background: transparent;
+
+    color: #d4af37;
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(212, 175, 55, 0.12);
+}
+
+
+/* ==========================================
+   PASOS
+   ========================================== */
+
+.design-process {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-top: 1px solid #222222;
+}
+
+
+.design-step {
+
+    display: grid;
+
+    grid-template-columns:
+        80px 1fr;
+
+    gap: 25px;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid #222222;
+
+    transition: 0.3s;
+}
+
+
+.design-step:hover {
+
+    padding-left: 12px;
+
+    border-color: #d4af37;
+}
+
+
+/* NÚMERO */
+
+.step-number {
+
+    color: #d4af37;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* CONTENIDO */
+
+.step-content h3 {
+
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+}
+
+
+.step-content p {
+
+    margin: 0;
+
+    max-width: 400px;
+
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .design-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+
+        padding:
+            120px 7%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .design-section {
+
+        padding:
+            100px 25px;
+    }
+
+
+    .design-intro h2 {
+
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .design-step {
+
+        grid-template-columns:
+            55px 1fr;
+
+        gap: 15px;
+    }
+
+
+    .step-content h3 {
+
+        font-size: 17px;
+    }
+
+}
+/* BOTÓN PRODUCTO */
+
+.product-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    padding-top: 17px;
+
+    border-top: 1px solid #292929;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.product-button span {
+    color: #d4af37;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+
+.product-button:hover {
+    color: #d4af37;
+}
+
+
+.product-button:hover span {
+    transform: translateX(7px);
+}
+
+
+/* ==========================================
+   PRODUCTOS - MÓVIL
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 320px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+
+}
+/* ==========================================
+   VIP — DK DESIGN KINGS
+   ========================================== */
+
+.vip-section {
+    position: relative;
+
+    padding: 140px 8%;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(212, 175, 55, 0.08),
+            transparent 35%
+        ),
+        #050505;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   INTRO VIP
+   ========================================== */
+
+.vip-intro {
+    max-width: 800px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+
+.vip-label {
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #d4af37;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+}
+
+
+.vip-intro h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(50px, 7vw, 90px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    font-weight: 900;
+}
+
+
+.vip-intro h2 span {
+    color: #d4af37;
+}
+
+
+.vip-intro p {
+    max-width: 600px;
+
+    margin: 30px auto 0;
+
+    color: #999999;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   TABLA
+   ========================================== */
+
+.vip-table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid #222222;
+
+    background: #090909;
+}
+
+
+.vip-table {
+    width: 100%;
+
+    min-width: 900px;
+
+    border-collapse: collapse;
+
+    text-align: left;
+}
+
+
+/* CABECERA */
+
+.vip-table thead {
+    background: #111111;
+}
+
+
+.vip-table th {
+    padding: 22px 20px;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    border-bottom:
+        1px solid #2a2a2a;
+}
+
+
+/* FILAS */
+
+.vip-table tbody tr {
+    transition: 0.3s;
+}
+
+
+.vip-table tbody tr:hover {
+    background:
+        rgba(212, 175, 55, 0.04);
+}
+
+
+.vip-table td {
+    padding: 28px 20px;
+
+    color: #999999;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    border-bottom:
+        1px solid #1c1c1c;
+}
+
+
+.vip-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* NIVEL */
+
+.vip-table td:first-child {
+    min-width: 150px;
+}
+
+
+.vip-table td:first-child strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+}
+
+
+.vip-table td:first-child span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #d4af37;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* PRECIO */
+
+.vip-table td:nth-child(2) strong {
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+
+/* COMISIÓN */
+
+.vip-table td:nth-child(3) strong {
+    color: #d4af37;
+
+    font-size: 25px;
+
+    font-weight: 900;
+}
+
+
+/* ==========================================
+   DESTACAR NIVEL 3
+   ========================================== */
+
+.vip-table tbody tr:nth-child(3) {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(212, 175, 55, 0.07),
+            transparent
+        );
+
+    box-shadow:
+        inset 3px 0 0 #d4af37;
+}
+
+
+/* ==========================================
+   NIVEL 5
+   ========================================== */
+
+.vip-table tbody tr:nth-child(5) {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(212, 175, 55, 0.04),
+            transparent
+        );
+}
+
+
+/* ==========================================
+   CÓMO FUNCIONA
+   ========================================== */
+
+.vip-how {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 80px;
+
+    max-width: 1100px;
+
+    margin: 100px auto 0;
+
+    padding-top: 70px;
+
+    border-top:
+        1px solid #222222;
+}
+
+
+.vip-how-title span {
+    color: #d4af37;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+
+.vip-how-title h3 {
+    margin: 18px 0 0;
+
+    color: #ffffff;
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+.vip-how-title h3 strong {
+    color: #d4af37;
+}
+
+
+.vip-how-text p {
+    margin: 0 0 20px;
+
+    color: #999999;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+.vip-how-text strong {
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   EJEMPLO
+   ========================================== */
+
+.vip-example {
+    max-width: 1100px;
+
+    margin: 60px auto 0;
+
+    padding: 30px;
+
+    border:
+        1px solid rgba(212, 175, 55, 0.25);
+
+    background:
+        rgba(212, 175, 55, 0.03);
+}
+
+
+.vip-example span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #d4af37;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.vip-example p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+.vip-example strong {
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .vip-section {
+        padding:
+            110px 5%;
+    }
+
+
+    .vip-how {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* ==========================================
+   MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .vip-section {
+        padding:
+            100px 20px;
+    }
+
+
+    .vip-intro {
+        margin-bottom: 50px;
+    }
+
+
+    .vip-intro h2 {
+        font-size: 52px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .vip-intro p {
+        font-size: 14px;
+    }
+
+
+    .vip-table-container {
+        margin-left: 0;
+
+        border-left: none;
+
+        border-right: none;
+    }
+
+
+    .vip-table {
+        min-width: 850px;
+    }
+
+
+    .vip-how-title h3 {
+        font-size: 36px;
+    }
+
+
+    .vip-example {
+        padding: 22px;
+    }
+
+}
+/* ==========================================
+   ANIMACIONES JAVASCRIPT
+   ========================================== */
+
+.hidden {
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+/* IMÁGENES DE PRODUCTOS */
+
+.clothing-image {
+    width: 115%;
+    height: 440px;
+
+    object-fit: contain;
+    display: block;
+
+    transform: translateY(95px);
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+/* ==========================================
+   SECCIÓN UBICACIÓN
+   ========================================== */
+
+.location-section {
+    width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 100px 8%;
+
+    box-sizing: border-box;
+
+    background: #050505;
+}
+
+/* IMAGEN */
+
+.location-image {
+    width: 100%;
+    height: 500px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(212, 175, 55, 0.35);
+
+    box-sizing: border-box;
+}
+
+.location-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+/* TEXTO */
+
+.location-content {
+    width: 100%;
+    max-width: 600px;
+}
+
+.location-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--gold);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.location-content h2 {
+    margin: 0 0 30px 0;
+
+    color: white;
+
+    font-size: 65px;
+    line-height: 0.95;
+
+    font-weight: 900;
+}
+
+.location-content h2 span {
+    color: var(--gold);
+}
+
+.location-content p {
+    margin: 0 0 20px 0;
+
+    color: #bdbdbd;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.location-content p strong {
+    color: white;
+}
+
+/* DIRECCIÓN */
+
+.location-address {
+    margin-top: 30px;
+
+    padding: 20px 25px;
+
+    border-left: 3px solid var(--gold);
+
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.location-address span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.location-address strong {
+    color: white;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   UBICACIÓN EN TABLET / MÓVIL
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .location-section {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 80px 7%;
+    }
+
+    .location-image {
+        height: 400px;
+    }
+
+    .location-content {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================
+   MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .location-section {
+        padding: 70px 6%;
+    }
+
+    .location-image {
+        height: 300px;
+    }
+
+    .location-content h2 {
+        font-size: 48px;
+    }
+
+    .location-content p {
+        font-size: 15px;
+    }
+}
+
+/* ==========================================
+   AJUSTES PARA ESCRITORIO (PC / pantallas grandes)
+   Solo se aplican a partir de 1251px de ancho,
+   así que tablet y móvil se quedan exactamente igual.
+   Todo el contenido se alinea a un mismo ancho (1250px)
+   centrado en la pantalla.
+   ========================================== */
+
+@media (min-width: 1251px) {
+
+    /* margen lateral común: 8% o lo necesario para centrar 1250px */
+    :root {
+        --pad-x: max(8%, calc((100% - 1250px) / 2));
+    }
+
+    /* Menú alineado con el resto del contenido */
+    .navbar {
+        max-width: none;
+        padding-left: var(--pad-x);
+        padding-right: var(--pad-x);
+    }
+
+    /* Portada */
+    .hero {
+        padding-left: var(--pad-x);
+        padding-right: var(--pad-x);
+    }
+
+    .hero-decoration {
+        right: var(--pad-x);
+    }
+
+    /* La foto de la portada se difumina en los bordes
+       en lugar de verse como un rectángulo recortado */
+    .dk-watermark {
+        -webkit-mask-image: radial-gradient(circle at center, #000 38%, transparent 68%);
+                mask-image: radial-gradient(circle at center, #000 38%, transparent 68%);
+    }
+
+    .scroll-indicator {
+        left: var(--pad-x);
+    }
+
+    /* Diseña: ocupaba solo 1300px pegado a la izquierda (hueco a la derecha) */
+    .design-section {
+        max-width: none;
+        padding-left: var(--pad-x);
+        padding-right: var(--pad-x);
+    }
+
+    /* Productos: mismo borde izquierdo que el resto */
+    .products-section {
+        max-width: 1310px;
+    }
+
+    /* VIP: fondo a todo el ancho y contenido alineado */
+    .vip-section {
+        max-width: none;
+        padding-left: var(--pad-x);
+        padding-right: var(--pad-x);
+    }
+
+    .vip-how,
+    .vip-example {
+        max-width: none;
+    }
+
+    /* Ubicación: sin el alto de pantalla completa (dejaba huecos enormes) */
+    .location-section {
+        min-height: auto;
+        padding: 120px var(--pad-x);
+    }
+}
+
+
+/* ==========================================
+   INICIAR SESIÓN
+   ========================================== */
+
+/* Botón de la barra */
+.login-button {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--gold);
+    border-radius: 50px;
+    padding: 10px 20px;
+    font: inherit;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    white-space: nowrap;
+    max-width: 160px;
+    margin-right: -30px;       /* acerca el botón al carrito (la barra tiene gap de 50px) */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.login-button:hover {
+    background: var(--gold);
+    color: #000;
+}
+
+/* Fondo oscuro */
+.login-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.login-overlay[hidden] {
+    display: none;
+}
+
+/* Caja */
+.login-box {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background: var(--card);
+    color: #fff;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 16px;
+    padding: 40px 32px 32px;
+}
+
+.login-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.login-close:hover {
+    opacity: 1;
+}
+
+.login-label {
+    display: block;
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.login-box h2 {
+    margin: 0 0 24px;
+    font-size: 1.8rem;
+}
+
+/* Pestañas */
+.login-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.login-tab {
+    flex: 1;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 10px 6px;
+    font: inherit;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.login-tab.activa {
+    background: var(--gold);
+    color: #000;
+    border-color: var(--gold);
+}
+
+/* Formularios */
+.login-form[hidden],
+.login-sesion[hidden],
+.login-tabs[hidden] {
+    display: none;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.login-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.login-form input {
+    background: #1e1e1e;
+    color: #fff;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font: inherit;
+    font-size: 1rem;           /* evita el zoom automático en iPad/móvil */
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.login-form .button {
+    margin-top: 6px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Mensajes */
+.login-msg {
+    min-height: 1.2em;
+    margin: 0 0 12px;
+    font-size: 0.85rem;
+    color: #ff6b6b;
+}
+
+.login-msg.ok {
+    color: #6bd68c;
+}
+
+/* Sesión iniciada */
+.login-sesion {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.login-sesion p {
+    margin: 0;
+    opacity: 0.7;
+}
+
+.login-sesion strong {
+    font-size: 1.4rem;
+    color: var(--gold);
+}
+
+.login-sesion span {
+    opacity: 0.7;
+    margin-bottom: 16px;
+}
+
+.login-sesion .button-outline {
+    cursor: pointer;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .login-button {
+        margin-left: auto;
+        margin-right: -30px;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+        max-width: 110px;
+    }
+}
+
+
+/* Mis diseños (dentro de la ventana de sesión) */
+
+.login-disenos {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-disenos h3 {
+    color: var(--gold);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin: 10px 0 12px;
+}
+
+.login-disenos-vacio {
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.login-disenos-vacio[hidden] {
+    display: none;
+}
+
+.login-disenos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.login-disenos li {
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: #1e1e1e;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}

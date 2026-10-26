@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DK Design Kings</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrito.css">
+    <script src="script.js" defer></script>
+    <script src="carrito.js" defer></script>
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header>
+        <nav class="navbar">
+
+<div class="logo">
+    <img src="./Dk1.png" 
+     style="width:125px; height:80px; object-fit:contain; display:block;"
+     alt="Prueba">
+</div>
+          
+<div class="brand-name">
+    Design Kings
+</div>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#disena">Diseña</a></li>
+                <li><a href="#vip">VIP</a></li>
+                <li><a href="Equipo.html#ubicacion">Ubicación</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+            </ul>
+
+            <button type="button" class="login-button" id="btn-login">
+                Iniciar sesión
+            </button>
+
+            <button type="button" class="cart-button nav-cart" data-carrito>
+                Carrito <span class="cart-count oculto">0</span>
+            </button>
+
+        </nav>
+    </header>
+
+    <main>
+
+
+<!-- PORTADA -->
+<section id="inicio" class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            DK DESIGN KINGS
+        </div>
+
+        <h1>
+            VISTE<br>
+            TU<br>
+            <span>IDEA.</span>
+        </h1>
+
+        <p class="hero-description">
+            Diseña prendas únicas, crea tu propio estilo
+            y convierte tus ideas en ropa que te representa.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#disena" class="button">
+                DISEÑA AHORA
+            </a>
+
+            <a href="#productos" class="button-outline">
+                VER PRODUCTOS
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ELEMENTO DECORATIVO -->
+
+    <div class="hero-decoration">
+
+        <div class="gold-circle"></div>
+
+        <div class="dk-watermark">
+    <img src="DkRopa.png" alt="DK Design Kings">
+</div>
+
+    </div>
+
+
+    <!-- INDICADOR DE SCROLL -->
+
+    <div class="scroll-indicator">
+
+        <span>SCROLL</span>
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
+
+<!-- DISEÑA -->
+<section id="disena" class="design-section">
+
+    <div class="design-intro">
+
+        <span class="design-label">
+            TU ESTILO. TUS REGLAS.
+        </span>
+
+        <h2>
+            DISEÑA TU<br>
+            <span>PROPIA ROPA.</span>
+        </h2>
+
+        <p>
+            En DK Design Kings puedes convertir tus ideas
+            en prendas únicas. Elige una prenda, personalízala
+            a tu manera y crea un diseño que represente tu estilo.
+        </p>
+
+        <a href="#productos" class="design-button">
+            EMPIEZA A DISEÑAR
+        </a>
+
+    </div>
+
+
+    <div class="design-process">
+
+        <div class="design-step">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <div class="step-content">
+
+                <h3>ELIGE</h3>
+
+                <p>
+                    Selecciona la prenda que quieres
+                    personalizar y empieza a crear tu diseño.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="design-step">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <div class="step-content">
+
+                <h3>DISEÑA</h3>
+
+                <p>
+                    Añade colores, imágenes, textos y detalles
+                    para conseguir un resultado totalmente personalizado.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="design-step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <div class="step-content">
+
+                <h3>PUBLICA</h3>
+
+                <p>
+                    Guarda tu diseño y, si quieres, compártelo
+                    con la comunidad de DK Design Kings.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="design-step">
+
+            <div class="step-number">
+                04
+            </div>
+
+            <div class="step-content">
+
+                <h3>GANA</h3>
+
+                <p>
+                    Si otros usuarios compran tu diseño,
+                    puedes obtener una comisión según tu nivel.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+  
+        <!-- PRODUCTOS -->
+<section id="productos" class="section products-section">
+
+    <div class="section-heading">
+        <span>DK COLLECTION</span>
+
+        <h2>ELIGE TU PRENDA</h2>
+
+        <p>
+            Selecciona una prenda y empieza a crear un diseño
+            completamente personalizado.
+        </p>
+    </div>
+
+
+    <div class="products">
+
+        <!-- CAMISETA -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img src="CamisetaDk.png" alt="Camiseta personalizada" class="clothing-image">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-type">
+                    DK BASIC
+                </span>
+
+                <h3>Camisetas</h3>
+
+                <p>
+                    Diseña tu camiseta desde cero y crea
+                    una prenda que represente tu estilo.
+                </p>
+
+                <a href="editor.html?prenda=manga_corta" class="product-button">
+                    PERSONALIZAR
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SUDADERA -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img src="SudaderaDk.png" alt="Sudadera personalizada" class="clothing-image">
+              <span class="product-tag">
+                    MÁS POPULAR
+                </span>
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-type">
+                    DK PREMIUM
+                </span>
+
+                <h3>Sudaderas</h3>
+
+                <p>
+                    Crea sudaderas personalizadas con tus
+                    propios diseños y detalles.
+                </p>
+
+                <a href="editor.html?prenda=sudadera" class="product-button">
+                    PERSONALIZAR
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PANTALONES -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img src="PantalonDk.png" alt="Pantalón personalizado" class="clothing-image">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-type">
+                    DK STREET
+                </span>
+
+                <h3>Pantalones</h3>
+
+                <p>
+                    Añade tus diseños y crea pantalones
+                    únicos para completar tu estilo.
+                </p>
+
+                <a href="editor.html?prenda=pantalon" class="product-button">
+                    PERSONALIZAR
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:50px;">
+        <a href="Coleccion.html" class="button">
+            VER DISEÑOS DK
+        </a>
+    </div>
+
+</section>
+
+<!-- VIP -->
+<section id="vip" class="section vip-section">
+
+    <div class="vip-intro">
+
+        <span class="vip-label">
+            DK DESIGN KINGS
+        </span>
+
+        <h2>
+            CONVIÉRTETE EN<br>
+            <span>CREADOR VIP.</span>
+        </h2>
+
+        <p>
+            Crea tus propios diseños, consigue ventas y
+            escala dentro de DK Design Kings. Cuanto más
+            creces, mayor será tu comisión y tus ventajas.
+        </p>
+
+    </div>
+
+
+    <!-- TABLA DE NIVELES -->
+
+    <div class="vip-table-container">
+
+        <table class="vip-table">
+
+            <thead>
+
+                <tr>
+                    <th>NIVEL</th>
+                    <th>PRECIO / MES</th>
+                    <th>COMISIÓN</th>
+                    <th>VENTAJAS</th>
+                    <th>PARA SUBIR</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <!-- NIVEL 1 -->
+
+                <tr>
+
+                    <td>
+                        <strong>NIVEL 1</strong>
+                        <span>CREADOR</span>
+                    </td>
+
+                    <td>
+                        <strong>7,99 €</strong>
+                    </td>
+
+                    <td>
+                        <strong>5%</strong>
+                    </td>
+
+                    <td>
+                        10 diseños básicos<br>
+                        15 colores
+                    </td>
+
+                    <td>
+                        8 ventas nuevas
+                    </td>
+
+                </tr>
+
+
+                <!-- NIVEL 2 -->
+
+                <tr>
+
+                    <td>
+                        <strong>NIVEL 2</strong>
+                        <span>DISEÑADOR</span>
+                    </td>
+
+                    <td>
+                        <strong>10,99 €</strong>
+                    </td>
+
+                    <td>
+                        <strong>10%</strong>
+                    </td>
+
+                    <td>
+                        Todos los diseños<br>
+                        Todos los colores
+                    </td>
+
+                    <td>
+                        15 ventas nuevas
+                    </td>
+
+                </tr>
+
+
+                <!-- NIVEL 3 -->
+
+                <tr>
+
+                    <td>
+                        <strong>NIVEL 3</strong>
+                        <span>CREADOR PRO</span>
+                    </td>
+
+                    <td>
+                        <strong>14,99 €</strong>
+                    </td>
+
+                    <td>
+                        <strong>15%</strong>
+                    </td>
+
+                    <td>
+                        Todo lo anterior<br>
+                        Ranking mensual + premios
+                    </td>
+
+                    <td>
+                        30 ventas nuevas
+                    </td>
+
+                </tr>
+
+
+                <!-- NIVEL 4 -->
+
+                <tr>
+
+                    <td>
+                        <strong>NIVEL 4</strong>
+                        <span>ELITE</span>
+                    </td>
+
+                    <td>
+                        <strong>PRÓXIMAMENTE</strong>
+                    </td>
+
+                    <td>
+                        <strong>20%</strong>
+                    </td>
+
+                    <td>
+                        Todo lo anterior<br>
+                        Prendas exclusivas<br>
+                        Ediciones limitadas
+                    </td>
+
+                    <td>
+                        PRÓXIMAMENTE
+                    </td>
+
+                </tr>
+
+
+                <!-- NIVEL 5 -->
+
+                <tr>
+
+                    <td>
+                        <strong>NIVEL 5</strong>
+                        <span>DESIGN KING</span>
+                    </td>
+
+                    <td>
+                        <strong>PRÓXIMAMENTE</strong>
+                    </td>
+
+                    <td>
+                        <strong>30%</strong>
+                    </td>
+
+                    <td>
+                        Todo lo anterior<br>
+                        Aporta tus propios diseños<br>
+                        Partner Oficial DK
+                    </td>
+
+                    <td>
+                        NIVEL MÁXIMO
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- FUNCIONAMIENTO -->
+
+    <div class="vip-how">
+
+        <div class="vip-how-title">
+            <span>¿CÓMO FUNCIONA?</span>
+
+            <h3>
+                SUBE DE NIVEL<br>
+                <strong>SIN PAGAR MÁS.</strong>
+            </h3>
+        </div>
+
+
+        <div class="vip-how-text">
+
+            <p>
+                Comienza pagando el nivel que elijas y
+                empieza a vender tus diseños. Si consigues
+                las ventas necesarias durante tu periodo
+                activo, subirás automáticamente al siguiente
+                nivel.
+            </p>
+
+            <p>
+                Al alcanzar un nuevo nivel, disfrutarás de
+                <strong>un mes completo de acceso gratuito</strong>
+                a ese nivel. Las ventas necesarias para cada
+                ascenso son nuevas y no se acumulan con las
+                del nivel anterior.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- EJEMPLO -->
+
+    <div class="vip-example">
+
+        <span> EJEMPLO DE PROGRESIÓN </span>
+
+        <p>
+            <strong>Nivel 1</strong> → 8 ventas →
+            <strong>Nivel 2 gratis durante 1 mes</strong>
+            →
+            15 ventas nuevas →
+            <strong>Nivel 3 gratis durante 1 mes</strong>
+            →
+            30 ventas nuevas →
+            <strong>Nivel 4</strong>
+        </p>
+
+    </div>
+
+</section>
+
+<!-- NOSOTROS -->
+       <section id="nosotros" class="section about">
+
+    <h2>SOBRE DK DESIGN KINGS</h2>
+
+    <p>
+        DK Design Kings nace con una idea clara:
+        que la ropa no tenga que limitarse a diseños
+        que ya existen.
+    </p>
+
+    <p>
+        Queremos crear un espacio donde cualquier persona
+        pueda diseñar sus propias prendas, compartir sus ideas
+        y formar parte de una comunidad creativa.
+    </p>
+
+    <p>
+        Desde una camiseta hasta una sudadera, cada diseño
+        puede convertirse en algo único y llevar la identidad
+        de quien lo ha creado.
+    </p>
+
+    <a href="Equipo.html" class="button" style="display:inline-block; margin-top:30px;">
+        CONOCE AL EQUIPO
+    </a>
+
+</section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <h3>DK DESIGN KINGS</h3>
+
+        <p>DISEÑA. CREA. REPRESENTA.</p>
+
+        © <span class="footer-year"></span> DK Design Kings
+
+    </footer>
+
+
+
+    <!-- INICIAR SESIÓN -->
+    <div class="login-overlay" id="login-modal" hidden>
+        <div class="login-box" role="dialog" aria-modal="true" aria-labelledby="login-title">
+
+            <button type="button" class="login-close" id="login-close" aria-label="Cerrar">&times;</button>
+
+            <span class="login-label">DK DESIGN KINGS</span>
+            <h2 id="login-title">MI CUENTA</h2>
+
+            <div class="login-tabs" id="login-tabs">
+                <button type="button" class="login-tab activa" data-vista="login">INICIAR SESIÓN</button>
+                <button type="button" class="login-tab" data-vista="registro">CREAR CUENTA</button>
+            </div>
+
+            <p class="login-msg" id="login-msg" role="alert"></p>
+
+            <!-- Iniciar sesión -->
+            <form class="login-form" id="form-login" data-vista="login" novalidate>
+                <label>Correo electrónico
+                    <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <label>Contraseña
+                    <input type="password" name="password" autocomplete="current-password" required>
+                </label>
+                <button type="submit" class="button">ENTRAR</button>
+            </form>
+
+            <!-- Crear cuenta -->
+            <form class="login-form" id="form-registro" data-vista="registro" hidden novalidate>
+                <label>Nombre
+                    <input type="text" name="nombre" autocomplete="name" required>
+                </label>
+                <label>Correo electrónico
+                    <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <label>Contraseña (mínimo 6 caracteres)
+                    <input type="password" name="password" autocomplete="new-password" required>
+                </label>
+                <label>Repite la contraseña
+                    <input type="password" name="password2" autocomplete="new-password" required>
+                </label>
+                <button type="submit" class="button">CREAR CUENTA</button>
+            </form>
+
+            <!-- Sesión iniciada -->
+            <div class="login-sesion" id="vista-sesion" hidden>
+                <p>Has iniciado sesión como</p>
+                <strong id="sesion-nombre"></strong>
+                <span id="sesion-email"></span>
+
+                <div class="login-disenos">
+                    <h3>MIS DISEÑOS</h3>
+                    <p class="login-disenos-vacio" id="sin-disenos">Aún no tienes diseños guardados.</p>
+                    <ul id="lista-disenos"></ul>
+                </div>
+
+                <button type="button" class="button-outline" id="btn-logout">CERRAR SESIÓN</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

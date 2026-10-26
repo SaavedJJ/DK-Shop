@@ -1,0 +1,313 @@
+/* PÁGINA DE EQUIPO */
+
+:root {
+    --team-gold: #d4af37;       /* cámbialo por el dorado de tu style.css */
+    --team-card-bg: #141414;
+    --team-border: rgba(212, 175, 55, 0.25);
+}
+
+.team-page {
+    padding: 0;
+}
+
+/* deja hueco para la barra fija al saltar a una sección */
+.team-section,
+.team-page .location-section,
+.suppliers-section {
+    scroll-margin-top: 70px;
+}
+
+.team-section {
+    padding: 140px 8% 100px;
+}
+
+/* la ubicación (estilos en style.css) sin alto de pantalla completa */
+.team-page .location-section {
+    min-height: auto;
+}
+
+.team-hero {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 70px;
+}
+
+.team-label {
+    display: inline-block;
+    color: var(--team-gold);
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.team-hero h1 {
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.team-hero h1 span {
+    color: var(--team-gold);
+}
+
+.team-hero p {
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: var(--team-card-bg);
+    border: 1px solid var(--team-border);
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--team-gold);
+}
+
+.team-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    border: 2px solid var(--team-gold);
+    background: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-avatar span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--team-gold);
+    letter-spacing: 2px;
+}
+
+.team-role {
+    display: block;
+    color: var(--team-gold);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.team-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+}
+
+.team-card p {
+    opacity: 0.8;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.team-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.team-tags li {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    border: 1px solid var(--team-border);
+    border-radius: 50px;
+}
+
+.team-back {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+
+/* NAVEGACIÓN INTERNA */
+
+.team-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+.team-nav a {
+    padding: 8px 18px;
+    border: 1px solid var(--team-border);
+    border-radius: 50px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.team-nav a:hover {
+    background: var(--team-gold);
+    color: #000;
+}
+
+
+/* PROVEEDORES */
+
+.suppliers-section {
+    padding: 100px 8%;
+    background: #0a0a0a;
+}
+
+.suppliers-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.suppliers-heading h2 {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.suppliers-heading h2 span {
+    color: var(--team-gold);
+}
+
+.suppliers-heading p {
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+.supplier-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.supplier-card {
+    width: calc((100% - 60px) / 3);
+    background: var(--team-card-bg);
+    border: 1px solid var(--team-border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.supplier-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--team-gold);
+}
+
+.supplier-card--soon {
+    border-style: dashed;
+    opacity: 0.8;
+}
+
+.supplier-logo {
+    height: 90px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.supplier-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.supplier-type {
+    display: block;
+    color: var(--team-gold);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.supplier-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+}
+
+.supplier-card p {
+    opacity: 0.8;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.supplier-place {
+    display: block;
+    opacity: 0.6;
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+}
+
+.supplier-link {
+    color: var(--team-gold);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.team-back {
+    padding: 60px 8% 80px;
+    margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+    .supplier-card {
+        width: calc((100% - 30px) / 2);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-section {
+        padding: 120px 6% 70px;
+    }
+
+    .suppliers-section {
+        padding: 70px 6%;
+    }
+
+    .supplier-card {
+        width: 100%;
+    }
+}

@@ -1,0 +1,171 @@
+/* PÁGINA DE DISEÑOS DK */
+
+:root {
+    --col-gold: #d4af37;       /* cámbialo por el dorado de tu style.css */
+    --col-card-bg: #141414;
+    --col-border: rgba(212, 175, 55, 0.25);
+}
+
+.collection-page {
+    padding: 140px 8% 80px;
+}
+
+.collection-hero {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 70px;
+}
+
+.collection-label {
+    display: inline-block;
+    color: var(--col-gold);
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.collection-hero h1 {
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.collection-hero h1 span {
+    color: var(--col-gold);
+}
+
+.collection-hero p {
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+.collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.collection-card {
+    width: calc((100% - 60px) / 3);
+    background: var(--col-card-bg);
+    border: 1px solid var(--col-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--col-gold);
+}
+
+.collection-image {
+    aspect-ratio: 1 / 1;
+    background: #1e1e1e;
+}
+
+.collection-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.collection-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--col-gold);
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.collection-info {
+    padding: 30px;
+}
+
+.collection-type {
+    display: block;
+    color: var(--col-gold);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.collection-info h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.collection-info p {
+    opacity: 0.8;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.collection-back {
+    text-align: center;
+    margin-top: 60px;
+}
+
+@media (max-width: 1000px) {
+    .collection-card {
+        width: calc((100% - 30px) / 2);
+    }
+}
+
+@media (max-width: 600px) {
+    .collection-card {
+        width: 100%;
+    }
+}
+
+
+/* Precio y compra */
+
+.collection-price {
+    color: var(--col-gold);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.collection-buy {
+    display: flex;
+    gap: 10px;
+}
+
+.collection-size {
+    background: #1e1e1e;
+    color: #fff;
+    border: 1px solid var(--col-border);
+    border-radius: 8px;
+    padding: 10px;
+    font: inherit;
+    font-size: 1rem;
+}
+
+.collection-add {
+    flex: 1;
+    background: var(--col-gold);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.collection-add:hover {
+    opacity: 0.85;
+}
