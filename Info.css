@@ -1,0 +1,463 @@
+/* PÁGINA "CÓMO FUNCIONA DK" — reutiliza las clases de Equipo.css (team-*, suppliers-heading, supplier-link) */
+
+.info-top {
+    padding-bottom: 20px;
+}
+
+.info-top .team-hero {
+    margin-bottom: 0;
+}
+
+.info-section {
+    padding: 100px 8%;
+    scroll-margin-top: 90px;
+}
+
+.info-section--dark {
+    background: #0a0a0a;
+}
+
+/* ---- PASOS DEL PEDIDO ---- */
+
+.info-steps {
+    align-items: start;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.info-steps li {
+    background: var(--team-card-bg);
+    border: 1px solid var(--team-border);
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.info-steps li:hover {
+    transform: translateY(-6px);
+    border-color: var(--team-gold);
+}
+
+.info-step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 16px;
+    border: 2px solid var(--team-gold);
+    border-radius: 50%;
+    color: var(--team-gold);
+    font-weight: 700;
+}
+
+.info-steps h3 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.info-steps p {
+    opacity: 0.8;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.info-note {
+    max-width: 800px;
+    margin: 50px auto 0;
+    padding: 28px 30px;
+    border: 1px dashed var(--team-border);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.info-note p {
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+/* ---- PASO ABIERTO (clic en un cuadrado) ---- */
+
+.info-step-head {
+    display: block;
+    width: 100%;
+    padding: 30px 20px;
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+}
+
+.info-more {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--team-gold);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.info-detail {
+    padding: 0 40px 40px;
+    text-align: left;
+}
+
+.info-detail p {
+    opacity: 0.85;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.info-close {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* un paso abierto: se ocultan los demás y este ocupa todo el ancho */
+.info-steps.has-open {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+}
+
+.info-steps.has-open li:not(.is-active) {
+    display: none;
+}
+
+.info-steps li.is-active {
+    border-color: var(--team-gold);
+    transform: none;
+}
+
+.info-steps li.is-active .info-step-head {
+    cursor: default;
+    padding-bottom: 20px;
+}
+
+.info-steps li.is-active .info-step-short,
+.info-steps li.is-active .info-more {
+    display: none;
+}
+
+#pedido.is-detail .info-note {
+    display: none;
+}
+
+.info-steps li.is-active {
+    animation: info-abre 0.35s ease;
+}
+
+@keyframes info-abre {
+    from { opacity: 0; transform: scale(0.97); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 700px) {
+    .info-detail { padding: 0 24px 30px; }
+}
+
+/* ---- TARJETAS GENÉRICAS ---- */
+
+.info-grid {
+    display: grid;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.info-grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.info-card {
+    background: var(--team-card-bg);
+    border: 1px solid var(--team-border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--team-gold);
+}
+
+.info-card--soon {
+    border-style: dashed;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    opacity: 0.8;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    border: 2px solid var(--team-gold);
+    border-radius: 50%;
+    color: var(--team-gold);
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+/* ---- ATENCIÓN AL CLIENTE ---- */
+
+.info-contact {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.info-contact-box {
+    background: var(--team-card-bg);
+    border: 1px solid var(--team-border);
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+}
+
+.info-contact-box .supplier-link {
+    display: block;
+    margin: 6px 0 16px;
+    word-break: break-all;
+}
+
+.info-contact-box p {
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.info-faq details {
+    background: var(--team-card-bg);
+    border: 1px solid var(--team-border);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+}
+
+.info-faq details[open] {
+    border-color: var(--team-gold);
+}
+
+.info-faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+}
+
+.info-faq summary::-webkit-details-marker { display: none; }
+
+.info-faq summary::after {
+    content: "+";
+    float: right;
+    color: var(--team-gold);
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.info-faq details[open] summary::after { content: "–"; }
+
+.info-faq details p {
+    margin-top: 12px;
+    opacity: 0.8;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* ---- REDES ---- */
+
+.info-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.info-social a {
+    padding: 14px 30px;
+    border: 1px solid var(--team-border);
+    border-radius: 50px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.info-social a:hover {
+    background: var(--team-gold);
+    color: #000;
+}
+
+/* ---- FUTURO ---- */
+
+.info-future-extra {
+    max-width: 700px;
+    margin: 40px auto 0;
+    text-align: center;
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+/* ---- RESPONSIVE ---- */
+
+@media (max-width: 1000px) {
+    .info-steps { grid-template-columns: repeat(2, 1fr); }
+    .info-grid--4 { grid-template-columns: repeat(2, 1fr); }
+    .info-contact { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .info-section { padding: 70px 6%; }
+    .info-steps,
+    .info-grid--3,
+    .info-grid--4 { grid-template-columns: 1fr; }
+}
+
+
+/* ---- PEDIDO: cuadrados solo con número y título ---- */
+
+.info-steps li[hidden],
+.info-detail[hidden] {
+    display: none !important;
+}
+
+.info-steps li {
+    position: relative;
+}
+
+.info-step-head {
+    padding: 36px 20px;
+}
+
+.info-steps li:not(.is-active)::after {
+    content: "+";
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    color: var(--team-gold);
+    font-size: 1.3rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.info-steps h3 {
+    margin-bottom: 0;
+}
+
+.info-steps li.is-active h3 {
+    margin-bottom: 20px;
+}
+
+/* ---- BARRA DE NAVEGACIÓN PROPIA DE INFO ---- */
+
+.info-header .navbar {
+    gap: 30px;
+}
+
+.menu--info {
+    gap: 26px;
+}
+
+.menu--info a {
+    white-space: nowrap;
+}
+
+/* el menú de la barra sustituye a los botones del encabezado (en escritorio y tablet) */
+.info-page .team-nav {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .info-header .navbar {
+        gap: 18px;
+    }
+
+    .info-header .brand-name {
+        display: none;
+    }
+
+    .menu--info {
+        gap: 16px;
+    }
+
+    .menu--info a {
+        font-size: 12px;
+    }
+}
+
+/* en móvil el menú de la barra se oculta, así que se vuelven a mostrar los botones */
+@media (max-width: 600px) {
+    .info-page .team-nav {
+        display: flex;
+    }
+}
+
+/* ---- RESTO DE SECCIONES: mismos cuadrados desplegables que "Tu pedido" ---- */
+
+.info-steps--3 { grid-template-columns: repeat(3, 1fr); }
+.info-steps--4 { grid-template-columns: repeat(4, 1fr); }
+
+/* etiqueta corta (3D, GLS, VIP...) en lugar de número */
+.info-step-num--tag {
+    width: 54px;
+    height: 54px;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+}
+
+/* sección "Lo que viene": borde discontinuo */
+.info-steps--soon li {
+    border-style: dashed;
+}
+
+.info-detail .team-role {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.info-detail .info-social {
+    justify-content: flex-start;
+    margin: 6px 0 22px;
+}
+
+.info-detail .supplier-link {
+    word-break: break-all;
+}
+
+/* abierto: ocupa todo el ancho aunque tenga modificador de columnas */
+.info-steps--3.has-open,
+.info-steps--4.has-open {
+    grid-template-columns: 1fr;
+}
+
+@media (max-width: 1000px) {
+    .info-steps--4 { grid-template-columns: repeat(2, 1fr); }
+    .info-steps--3.has-open,
+    .info-steps--4.has-open { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .info-steps--3,
+    .info-steps--4 { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cómo funciona DK | DK Design Kings</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="Equipo.css">
+    <link rel="stylesheet" href="Info.css?v=4">
+    <script src="script.js" defer></script>
+    <script src="carrito.js" defer></script>
+    <script src="Info.js?v=4" defer></script>
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN (propia de la página Info: solo "Inicio" vuelve a la web principal) -->
+    <header class="info-header">
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="./Dk1.png"
+                     style="width:125px; height:80px; object-fit:contain; display:block;"
+                     alt="DK Design Kings">
+            </div>
+
+            <div class="brand-name">
+                Design Kings
+            </div>
+
+            <ul class="menu menu--info">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="#pedido">Pedido</a></li>
+                <li><a href="#envios">Envíos</a></li>
+                <li><a href="#atencion">Atención</a></li>
+                <li><a href="#porque-dk">Por qué DK</a></li>
+                <li><a href="#comunidad">Comunidad</a></li>
+                <li><a href="#futuro">Futuro</a></li>
+            </ul>
+
+            <button type="button" class="cart-button nav-cart" data-carrito>
+                Carrito <span class="cart-count oculto">0</span>
+            </button>
+
+        </nav>
+    </header>
+
+    <main class="team-page info-page">
+
+        <!-- ============ CABECERA ============ -->
+        <section class="team-section info-top">
+
+            <div class="team-hero">
+                <span class="team-label">DK DESIGN KINGS</span>
+                <h1>CÓMO<br><span>FUNCIONA DK.</span></h1>
+                <p>
+                    Todo lo que pasa desde que terminas tu diseño
+                    hasta que la prenda llega a tu casa.
+                </p>
+
+                <nav class="team-nav" aria-label="Secciones de esta página">
+                    <a href="#pedido">PEDIDO</a>
+                    <a href="#envios">ENVÍOS</a>
+                    <a href="#atencion">ATENCIÓN</a>
+                    <a href="#porque-dk">POR QUÉ DK</a>
+                    <a href="#comunidad">COMUNIDAD</a>
+                    <a href="#futuro">FUTURO</a>
+                </nav>
+            </div>
+
+        </section>
+
+
+        <!-- ============ 1. CÓMO ES TU PEDIDO ============ -->
+        <section id="pedido" class="info-section">
+
+            <div class="suppliers-heading">
+                <span class="team-label">01</span>
+                <h2>TU<br><span>PEDIDO.</span></h2>
+                <p>
+                    Puedes ver en qué fase está desde tu cuenta,
+                    en cualquier momento.
+                </p>
+            </div>
+
+            <ol class="info-steps">
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-1">
+                        <span class="info-step-num">1</span>
+                        <h3>Pedido recibido</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-1" hidden>
+                        <p>Cuando terminas tu diseño puedes comprobar cómo queda en el visor 3D y añadirlo al carrito. Antes de confirmar la compra revisas los artículos, las cantidades, el precio y los posibles gastos adicionales.</p>
+                        <p>Después de pagar y facilitar los datos de envío, tu pedido queda registrado y aparece en tu cuenta como <strong>pedido recibido</strong>. Es el punto de partida del proceso de fabricación y entrega.</p>
+                        <button type="button" class="button-outline info-close">← VER TODAS LAS FASES</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-2">
+                        <span class="info-step-num">2</span>
+                        <h3>Preparación</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-2" hidden>
+                        <p>En cuanto entra tu pedido, DK Design Kings envía al proveedor toda la información necesaria para fabricar tu prenda: el tipo de producto, la talla, el color y el diseño que has seleccionado.</p>
+                        <p>Así el taller recibe exactamente lo que tú has creado y puede empezar a trabajar en ello. Tú puedes ver en tu cuenta que el pedido ya está en preparación.</p>
+                        <button type="button" class="button-outline info-close">← VER TODAS LAS FASES</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-3">
+                        <span class="info-step-num">3</span>
+                        <h3>Fabricación</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-3" hidden>
+                        <p>En esta primera etapa, la fabricación y la personalización de las prendas están a cargo de proveedores especializados. Gracias a ello podemos ofrecerte un catálogo de camisetas, sudaderas y pantalones sin depender de maquinaria propia.</p>
+                        <p>Si el proyecto crece, el plan de DK es adaptar nuestro local de Altura para fabricar nuestras propias prendas.</p>
+                        <button type="button" class="button-outline info-close">← VER TODAS LAS FASES</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-4">
+                        <span class="info-step-num">4</span>
+                        <h3>Envío</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-4" hidden>
+                        <p>Cuando el proveedor termina, recibimos o recogemos la prenda y pasa por nuestro <strong>control de calidad</strong>: comprobamos que está en buen estado y que el diseño se ha aplicado correctamente.</p>
+                        <p>Si detectamos algún problema, contactamos con el proveedor para solucionarlo antes de que llegue a ti. Cuando todo está bien, preparamos tu pedido para su entrega.</p>
+                        <button type="button" class="button-outline info-close">← VER TODAS LAS FASES</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-5">
+                        <span class="info-step-num">5</span>
+                        <h3>Entrega</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-5" hidden>
+                        <p>En las zonas cercanas a nuestro almacén realizamos algunos envíos directamente. El resto de pedidos se entregan mediante servicios y puntos de paquetería, como GLS en Segorbe.</p>
+                        <p>Puedes consultar el estado de tu compra en tu cuenta en cualquier momento. Si tienes alguna duda o incidencia con tu pedido, nuestro equipo de atención al cliente te ayuda.</p>
+                        <button type="button" class="button-outline info-close">← VER TODAS LAS FASES</button>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="info-note">
+                <span class="team-role">CONTROL DE CALIDAD</span>
+                <p>
+                    Antes de enviar nada, revisamos que la prenda esté en
+                    perfecto estado y que el diseño esté bien aplicado.
+                    Si algo no está bien, lo resolvemos con el proveedor
+                    antes de que llegue a ti.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section id="envios" class="info-section info-section--dark">
+
+            <div class="suppliers-heading">
+                <span class="team-label">02</span>
+                <h2>ENVÍOS Y<br><span>ENTREGA.</span></h2>
+                <p>Así te hacemos llegar tu pedido.</p>
+            </div>
+
+            <ol class="info-steps info-steps--3 ">
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-e1">
+                        <span class="info-step-num info-step-num--tag">DIR</span>
+                        <h3>Entrega directa</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-e1" hidden>
+                        <p>En las zonas próximas a nuestro almacén de Altura realizamos algunos envíos directamente, desde nuestras propias instalaciones. Así tenemos un mayor control sobre tu pedido y conocemos mejor lo que necesitas.</p>
+                        <p>Esta forma de entrega forma parte de la primera etapa del proyecto. Si DK crece, la zona de reparto podrá ampliarse según nuestra capacidad logística.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-e2">
+                        <span class="info-step-num info-step-num--tag">GLS</span>
+                        <h3>Puntos de envío</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-e2" hidden>
+                        <p>Para el resto de pedidos utilizamos servicios y puntos de paquetería, como <strong>GLS en Segorbe</strong>.</p>
+                        <p>Cuando tu prenda ha pasado el control de calidad, preparamos el pedido y lo dejamos listo para su entrega. Puedes ver en qué fase está desde tu cuenta en cualquier momento.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-e3">
+                        <span class="info-step-num info-step-num--tag">€</span>
+                        <h3>Gastos de envío</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-e3" hidden>
+                        <p>Antes de pagar ves en el carrito los artículos, las cantidades, el precio y los posibles gastos adicionales, para que no haya sorpresas al confirmar la compra.</p>
+                        <!-- Aquí puedes añadir tu tarifa real: "Envío desde X € · Gratis a partir de X €" -->
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+            </ol>
+
+        </section>
+
+
+        <section id="atencion" class="info-section">
+
+            <div class="suppliers-heading">
+                <span class="team-label">03</span>
+                <h2>ATENCIÓN AL<br><span>CLIENTE.</span></h2>
+                <p>¿Dudas con tu diseño o con un pedido? Estamos para ayudarte.</p>
+            </div>
+
+            <ol class="info-steps  ">
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-a1">
+                        <span class="info-step-num info-step-num--tag">@</span>
+                        <h3>Escríbenos</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-a1" hidden>
+                        <!-- CAMBIA ESTE CORREO POR EL TUYO -->
+                        <p><a href="mailto:TU-CORREO@dkdesignkings.com" class="supplier-link">TU-CORREO@dkdesignkings.com</a></p>
+                        <p>Te respondemos lo antes posible. Resolvemos dudas sobre tus diseños y gestionamos cualquier incidencia relacionada con tus pedidos.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-a2">
+                        <span class="info-step-num info-step-num--tag">3D</span>
+                        <h3>¿Puedo ver mi prenda antes de comprarla?</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-a2" hidden>
+                        <p>Sí. Puedes verla en el <strong>visor 3D</strong> mientras la diseñas, antes de añadirla al carrito.</p>
+                        <p>Así compruebas cómo quedan el modelo, el color, la talla y los elementos de diseño antes de hacer el pedido.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-a3">
+                        <span class="info-step-num info-step-num--tag">PED</span>
+                        <h3>¿Dónde veo cómo va mi pedido?</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-a3" hidden>
+                        <p>En tu cuenta. Allí aparece el estado de tu compra con las diferentes fases: pedido recibido, preparación, fabricación, envío y entrega.</p>
+                        <p>Puedes consultarlo en cualquier momento.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-a4">
+                        <span class="info-step-num info-step-num--tag">DIS</span>
+                        <h3>¿Puedo guardar mis diseños para más tarde?</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-a4" hidden>
+                        <p>Sí. Los diseños se guardan en tu perfil de usuario, así que puedes retomarlos cuando quieras antes de hacer el pedido.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-a5">
+                        <span class="info-step-num info-step-num--tag">!</span>
+                        <h3>¿Qué pasa si mi prenda llega con algún problema?</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-a5" hidden>
+                        <p>Escríbenos y gestionamos la incidencia contigo y con el proveedor.</p>
+                        <p>Además, antes de enviar cada prenda pasa por nuestro control de calidad: si detectamos algún fallo, lo resolvemos con el proveedor antes de que llegue a ti.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+            </ol>
+
+        </section>
+
+
+        <section id="porque-dk" class="info-section info-section--dark">
+
+            <div class="suppliers-heading">
+                <span class="team-label">04</span>
+                <h2>POR QUÉ<br><span>DK.</span></h2>
+                <p>Lo que nos hace diferentes de otras tiendas de ropa personalizada.</p>
+            </div>
+
+            <ol class="info-steps info-steps--4 ">
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-p1">
+                        <span class="info-step-num info-step-num--tag">3D</span>
+                        <h3>Visor 3D</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-p1" hidden>
+                        <p>Comprueba cómo queda tu prenda antes de comprarla. El visor 3D te permite ver el resultado de tu personalización antes de añadirla al carrito.</p>
+                        <p>Es una forma sencilla de elegir con seguridad y de evitar sorpresas.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-p2">
+                        <span class="info-step-num info-step-num--tag">LTD</span>
+                        <h3>Colecciones limitadas</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-p2" hidden>
+                        <p>Lanzamos productos exclusivos durante determinados periodos o hasta agotar existencias.</p>
+                        <p>Estas ediciones limitadas y colecciones especiales renuevan la oferta de forma periódica.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-p3">
+                        <span class="info-step-num info-step-num--tag">DK</span>
+                        <h3>Diseños exclusivos</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-p3" hidden>
+                        <p>Prendas con una estética urbana y moderna propia de la marca.</p>
+                        <p>Nuestro catálogo inicial se centra en camisetas, sudaderas y pantalones, con opciones para niños y adultos, que puedes adaptar con tus propias imágenes, textos y logotipos.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-p4">
+                        <span class="info-step-num info-step-num--tag">VIP</span>
+                        <h3>Creadores</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-p4" hidden>
+                        <p>Publica tus diseños y gana comisión con cada venta.</p>
+                        <p>Nuestro sistema VIP de creadores cuenta con diferentes niveles, ventajas y porcentajes de comisión para quienes publican diseños y generan ventas.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+            </ol>
+
+        </section>
+
+
+        <section id="comunidad" class="info-section">
+
+            <div class="suppliers-heading">
+                <span class="team-label">05</span>
+                <h2>LA<br><span>COMUNIDAD.</span></h2>
+                <p>Concursos de diseño, ediciones limitadas y colaboraciones con creadores de contenido. Síguenos para no perderte nada.</p>
+            </div>
+
+            <ol class="info-steps info-steps--4 ">
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-c1">
+                        <span class="info-step-num info-step-num--tag">WIN</span>
+                        <h3>Concursos de diseño</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-c1" hidden>
+                        <p>Organizamos concursos de diseño para que la comunidad participe y muestre su creatividad.</p>
+                        <p>Son una forma de renovar la oferta de la tienda con propuestas de nuestros propios clientes.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-c2">
+                        <span class="info-step-num info-step-num--tag">LTD</span>
+                        <h3>Ediciones limitadas</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-c2" hidden>
+                        <p>Lanzamos colecciones especiales y ediciones limitadas, disponibles durante un tiempo o hasta agotar existencias.</p>
+                        <p>Síguenos en redes para enterarte de cada lanzamiento.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-c3">
+                        <span class="info-step-num info-step-num--tag">COL</span>
+                        <h3>Colaboraciones</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-c3" hidden>
+                        <p>Colaboramos con creadores de contenido, artistas e influencers para presentar nuevas colecciones y dar a conocer la marca.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-c4">
+                        <span class="info-step-num info-step-num--tag">RRSS</span>
+                        <h3>Síguenos</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-c4" hidden>
+                        <p>Mostramos las prendas, presentamos nuevas colecciones y compartimos novedades en nuestras redes.</p>
+                        <div class="info-social">
+                            <!-- CAMBIA CADA href="#" POR TU ENLACE REAL -->
+                            <a href="#" target="_blank" rel="noopener">TIKTOK</a>
+                            <a href="#" target="_blank" rel="noopener">INSTAGRAM</a>
+                            <a href="#" target="_blank" rel="noopener">YOUTUBE</a>
+                            <a href="#" target="_blank" rel="noopener">TWITCH</a>
+                        </div>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+            </ol>
+
+        </section>
+
+
+        <section id="futuro" class="info-section info-section--dark">
+
+            <div class="suppliers-heading">
+                <span class="team-label">06</span>
+                <h2>LO QUE<br><span>VIENE.</span></h2>
+                <p>DK Design Kings crece contigo. Esto es lo que estamos preparando.</p>
+            </div>
+
+            <ol class="info-steps info-steps--4 info-steps--soon ">
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-f1">
+                        <span class="info-step-num info-step-num--tag">+</span>
+                        <h3>Más prendas</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-f1" hidden>
+                        <span class="team-role">PRÓXIMAMENTE</span>
+                        <p>Gorras, zapatillas y otros accesorios. Ampliaremos el catálogo según la evolución del negocio.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-f2">
+                        <span class="info-step-num info-step-num--tag">APP</span>
+                        <h3>App móvil</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-f2" hidden>
+                        <span class="team-role">PRÓXIMAMENTE</span>
+                        <p>Diseña y sigue tus pedidos desde el móvil.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-f3">
+                        <span class="info-step-num info-step-num--tag">IA</span>
+                        <h3>Ayuda con IA</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-f3" hidden>
+                        <span class="team-role">PRÓXIMAMENTE</span>
+                        <p>Propuestas de diseño generadas con inteligencia artificial para ayudarte a empezar.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="info-step-head" aria-expanded="false" aria-controls="detalle-f4">
+                        <span class="info-step-num info-step-num--tag">DK</span>
+                        <h3>Fabricación propia</h3>
+                    </button>
+
+                    <div class="info-detail" id="detalle-f4" hidden>
+                        <span class="team-role">SI EL PROYECTO CRECE</span>
+                        <p>Fabricaremos nuestras propias prendas en nuestro local de Altura, con la maquinaria necesaria. Si el volumen de ventas aumenta, también podremos estudiar un espacio propio de producción o un centro logístico.</p>
+                        <button type="button" class="button-outline info-close">← VER TODOS</button>
+                    </div>
+                </li>
+            </ol>
+
+        </section>
+
+        <div class="team-back">
+            <a href="index.html#nosotros" class="button-outline">← VOLVER</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <h3>DK DESIGN KINGS</h3>
+        <p>DISEÑA. CREA. REPRESENTA.</p>
+        © <span class="footer-year"></span> DK Design Kings
+    </footer>
+
+</body>
+</html>
